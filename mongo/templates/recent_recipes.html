@@ -1,0 +1,21 @@
+<!-- templates/recent_movies.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recent Recipes</title>
+</head>
+<body>
+  <h1>Five Most Recent Recipes</h1>
+  <ul>
+     {% for recipe in recipes %}
+           <li>
+              <strong>{{ recipe.name }}</strong> 
+           </li>
+     {% empty %}
+           <li>No recipes found.</li>
+     {% endfor %}
+  </ul>
+</body>
+</html>
